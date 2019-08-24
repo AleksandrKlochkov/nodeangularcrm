@@ -13,7 +13,6 @@ module.exports.getAll = async function(req, res) {
         }
     }
 
-
     if(req.query.end) {
         if(!query.date) {
             query.date = {}
