@@ -1,7 +1,7 @@
 <form 
     class="card"
     [formGroup] ="form"
-    (nsSubmit)="onSubmit()"
+    (ngSubmit)="onSubmit()"
 >
     <div class="card-content">
         <span class="card-title">Войти в систему</span>
@@ -41,7 +41,7 @@
     </div>
     <div class="card-action">
         <button 
-        [disabled]="form.invalid"
+        [disabled]="form.invalid || form.disabled"
         type="submit"
         class="modal-action btn waves-effect"
         >
