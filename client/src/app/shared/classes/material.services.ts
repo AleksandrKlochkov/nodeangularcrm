@@ -2,6 +2,12 @@ import { ElementRef } from '@angular/core';
 
 declare var M
 
+export interface MaterialInstance {
+    open?(): void
+    close?(): void
+    destroy?(): void
+} 
+
 
 export class MaterialServices {
     static toast(message: string) {
@@ -10,5 +16,13 @@ export class MaterialServices {
 
     static initializeFloatingButton(ref: ElementRef) {
         M.FloatingActionButton.init(ref.nativeElement)
+    }
+
+    static updateTextInputs() {
+        M.updateTextFields()
+    }
+
+    static initModal(ref: ElementRef): MaterialInstance{
+        return M.Modal.init(ref.nativeElement)
     }
 }
