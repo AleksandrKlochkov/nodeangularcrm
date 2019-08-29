@@ -41,4 +41,8 @@ export class MaterialServices {
             onClose
         })
     }
+
+    static initTapTarget(ref: ElementRef): MaterialInstance {
+        return M.TapTarget.init(ref.nativeElement)
+    }
 }
